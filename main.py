@@ -219,7 +219,7 @@ def run_pipeline(input_path: str = DEFAULT_INPUT, input_filename: str = None, pr
 
 def run(input_path: str = DEFAULT_INPUT) -> None:
     print("=" * 70)
-    print(f" MANAGER BATCH RUN  |  input: {input_path}")
+    print(f" MANAGER BATCH RUNS  |  input: {input_path}")
     print("=" * 70)
     r = run_pipeline(input_path)
 
