@@ -1,0 +1,1405 @@
+{
+  "version": 1,
+  "runs": [
+    {
+      "run_id": 1,
+      "date": "2026-06-22 13:46:03",
+      "n_skus": 100,
+      "n_changed": 90,
+      "n_applied": 46,
+      "n_flagged": 48
+    },
+    {
+      "run_id": 2,
+      "date": "2026-06-22 15:20:31",
+      "n_skus": 100,
+      "n_changed": 55,
+      "n_applied": 55,
+      "n_flagged": 0
+    },
+    {
+      "run_id": 3,
+      "date": "2026-06-22 15:38:18",
+      "n_skus": 100,
+      "n_changed": 38,
+      "n_applied": 38,
+      "n_flagged": 0
+    },
+    {
+      "run_id": 4,
+      "date": "2026-06-22 16:23:45",
+      "n_skus": 100,
+      "n_changed": 22,
+      "n_applied": 22,
+      "n_flagged": 0
+    },
+    {
+      "run_id": 5,
+      "date": "2026-06-22 16:35:29",
+      "n_skus": 100,
+      "n_changed": 14,
+      "n_applied": 14,
+      "n_flagged": 0
+    },
+    {
+      "run_id": 6,
+      "date": "2026-06-22 18:19:27",
+      "n_skus": 100,
+      "n_changed": 18,
+      "n_applied": 18,
+      "n_flagged": 0
+    },
+    {
+      "run_id": 7,
+      "date": "2026-06-23 10:45:48",
+      "n_skus": 100,
+      "n_changed": 15,
+      "n_applied": 15,
+      "n_flagged": 0
+    },
+    {
+      "run_id": 8,
+      "date": "2026-06-23 14:02:20",
+      "n_skus": 100,
+      "n_changed": 20,
+      "n_applied": 19,
+      "n_flagged": 1
+    },
+    {
+      "run_id": 9,
+      "date": "2026-06-28 22:06:02",
+      "n_skus": 100,
+      "n_changed": 26,
+      "n_applied": 26,
+      "n_flagged": 0
+    }
+  ],
+  "last_decisions": {
+    "SKU-1007": {
+      "date": "2026-06-28 22:06:02",
+      "category": "Kitchen",
+      "price_bucket": "Kitchen|healthy|winning_box",
+      "ad_bucket": "Kitchen|low_acos",
+      "price_intent": "DROP_PRICE",
+      "old_price": 89.46,
+      "new_price": 88.62,
+      "ad_intent": "INCREASE_BIDS",
+      "bid_change_pct": 0.2,
+      "pre": {
+        "price": 89.46,
+        "cogs": 30.01,
+        "fba_fee": 6.1,
+        "referral_pct": 0.12,
+        "velocity": 486,
+        "ad_spend": 234.93
+      }
+    },
+    "SKU-1009": {
+      "date": "2026-06-28 22:06:02",
+      "category": "Kitchen",
+      "price_bucket": "Kitchen|healthy|losing_box",
+      "ad_bucket": "Kitchen|low_acos",
+      "price_intent": "HOLD_PRICE",
+      "old_price": 63.86,
+      "new_price": 63.86,
+      "ad_intent": "INCREASE_BIDS",
+      "bid_change_pct": 0.2,
+      "pre": {
+        "price": 63.86,
+        "cogs": 25.36,
+        "fba_fee": 3.44,
+        "referral_pct": 0.15,
+        "velocity": 447,
+        "ad_spend": 1692.16
+      }
+    },
+    "SKU-1011": {
+      "date": "2026-06-28 22:06:02",
+      "category": "Electronics Accessories",
+      "price_bucket": "Electronics Accessories|healthy|losing_box",
+      "ad_bucket": "Electronics Accessories|high_acos",
+      "price_intent": "DROP_PRICE",
+      "old_price": 19.29,
+      "new_price": 18.91,
+      "ad_intent": "MAINTAIN_ADS",
+      "bid_change_pct": 0.0,
+      "pre": {
+        "price": 19.29,
+        "cogs": 6.12,
+        "fba_fee": 7.36,
+        "referral_pct": 0.08,
+        "velocity": 336,
+        "ad_spend": 452.64
+      }
+    },
+    "SKU-1012": {
+      "date": "2026-06-28 22:06:02",
+      "category": "Electronics Accessories",
+      "price_bucket": "Electronics Accessories|healthy|losing_box",
+      "ad_bucket": "Electronics Accessories|mid_acos",
+      "price_intent": "DROP_PRICE",
+      "old_price": 31.99,
+      "new_price": 32.77,
+      "ad_intent": "MAINTAIN_ADS",
+      "bid_change_pct": 0.0,
+      "pre": {
+        "price": 31.99,
+        "cogs": 9.71,
+        "fba_fee": 5.79,
+        "referral_pct": 0.15,
+        "velocity": 252,
+        "ad_spend": 1353.0
+      }
+    },
+    "SKU-1013": {
+      "date": "2026-06-28 22:06:02",
+      "category": "Electronics Accessories",
+      "price_bucket": "Electronics Accessories|overstock|losing_box",
+      "ad_bucket": "Electronics Accessories|mid_acos",
+      "price_intent": "RAISE_PRICE_SLIGHTLY",
+      "old_price": 84.25,
+      "new_price": 85.94,
+      "ad_intent": "MAINTAIN_ADS",
+      "bid_change_pct": 0.0,
+      "pre": {
+        "price": 84.25,
+        "cogs": 35.88,
+        "fba_fee": 3.33,
+        "referral_pct": 0.1,
+        "velocity": 133,
+        "ad_spend": 1667.56
+      }
+    },
+    "SKU-1014": {
+      "date": "2026-06-28 22:06:02",
+      "category": "Electronics Accessories",
+      "price_bucket": "Electronics Accessories|healthy|losing_box",
+      "ad_bucket": "Electronics Accessories|low_acos",
+      "price_intent": "DROP_PRICE",
+      "old_price": 31.77,
+      "new_price": 33.57,
+      "ad_intent": "INCREASE_BIDS",
+      "bid_change_pct": 0.2,
+      "pre": {
+        "price": 31.77,
+        "cogs": 11.84,
+        "fba_fee": 6.34,
+        "referral_pct": 0.1,
+        "velocity": 168,
+        "ad_spend": 538.02
+      }
+    },
+    "SKU-1015": {
+      "date": "2026-06-28 22:06:02",
+      "category": "Electronics Accessories",
+      "price_bucket": "Electronics Accessories|healthy|losing_box",
+      "ad_bucket": "Electronics Accessories|high_acos",
+      "price_intent": "RAISE_PRICE_SLIGHTLY",
+      "old_price": 58.48,
+      "new_price": 59.65,
+      "ad_intent": "MAINTAIN_ADS",
+      "bid_change_pct": 0.0,
+      "pre": {
+        "price": 58.48,
+        "cogs": 16.29,
+        "fba_fee": 6.34,
+        "referral_pct": 0.15,
+        "velocity": 308,
+        "ad_spend": 1624.24
+      }
+    },
+    "SKU-1028": {
+      "date": "2026-06-28 22:06:02",
+      "category": "Home Decor",
+      "price_bucket": "Home Decor|healthy|winning_box",
+      "ad_bucket": "Home Decor|mid_acos",
+      "price_intent": "RAISE_PRICE_SLIGHTLY",
+      "old_price": 59.74,
+      "new_price": 60.93,
+      "ad_intent": "MAINTAIN_ADS",
+      "bid_change_pct": 0.0,
+      "pre": {
+        "price": 59.74,
+        "cogs": 20.77,
+        "fba_fee": 3.52,
+        "referral_pct": 0.1,
+        "velocity": 440,
+        "ad_spend": 688.05
+      }
+    },
+    "SKU-1035": {
+      "date": "2026-06-28 22:06:02",
+      "category": "Outdoor",
+      "price_bucket": "Outdoor|healthy|winning_box",
+      "ad_bucket": "Outdoor|mid_acos",
+      "price_intent": "HOLD_PRICE",
+      "old_price": 29.22,
+      "new_price": 29.22,
+      "ad_intent": "INCREASE_BIDS",
+      "bid_change_pct": 0.2,
+      "pre": {
+        "price": 29.22,
+        "cogs": 8.81,
+        "fba_fee": 5.03,
+        "referral_pct": 0.15,
+        "velocity": 82,
+        "ad_spend": 317.46
+      }
+    },
+    "SKU-1039": {
+      "date": "2026-06-28 22:06:02",
+      "category": "Travel",
+      "price_bucket": "Travel|overstock|losing_box",
+      "ad_bucket": "Travel|low_acos",
+      "price_intent": "HOLD_PRICE",
+      "old_price": 36.37,
+      "new_price": 36.37,
+      "ad_intent": "INCREASE_BIDS",
+      "bid_change_pct": 0.2,
+      "pre": {
+        "price": 36.37,
+        "cogs": 12.54,
+        "fba_fee": 4.3,
+        "referral_pct": 0.15,
+        "velocity": 203,
+        "ad_spend": 648.23
+      }
+    },
+    "SKU-1048": {
+      "date": "2026-06-28 22:06:02",
+      "category": "Pet Supplies",
+      "price_bucket": "Pet Supplies|overstock|winning_box",
+      "ad_bucket": "Pet Supplies|high_acos",
+      "price_intent": "RAISE_PRICE_SLIGHTLY",
+      "old_price": 12.46,
+      "new_price": 12.71,
+      "ad_intent": "MAINTAIN_ADS",
+      "bid_change_pct": 0.0,
+      "pre": {
+        "price": 12.46,
+        "cogs": 4.34,
+        "fba_fee": 4.78,
+        "referral_pct": 0.08,
+        "velocity": 402,
+        "ad_spend": 403.9
+      }
+    },
+    "SKU-1049": {
+      "date": "2026-06-28 22:06:02",
+      "category": "Pet Supplies",
+      "price_bucket": "Pet Supplies|overstock|losing_box",
+      "ad_bucket": "Pet Supplies|mid_acos",
+      "price_intent": "DROP_PRICE",
+      "old_price": 62.68,
+      "new_price": 56.67,
+      "ad_intent": "MAINTAIN_ADS",
+      "bid_change_pct": 0.0,
+      "pre": {
+        "price": 62.68,
+        "cogs": 23.05,
+        "fba_fee": 5.91,
+        "referral_pct": 0.12,
+        "velocity": 99,
+        "ad_spend": 1470.24
+      }
+    },
+    "SKU-1050": {
+      "date": "2026-06-28 22:06:02",
+      "category": "Kitchen",
+      "price_bucket": "Kitchen|critical|winning_box",
+      "ad_bucket": "Kitchen|mid_acos",
+      "price_intent": "RAISE_PRICE_SLIGHTLY",
+      "old_price": 89.13,
+      "new_price": 90.91,
+      "ad_intent": "MAINTAIN_ADS",
+      "bid_change_pct": 0.0,
+      "pre": {
+        "price": 89.13,
+        "cogs": 23.87,
+        "fba_fee": 6.92,
+        "referral_pct": 0.08,
+        "velocity": 519,
+        "ad_spend": 205.19
+      }
+    },
+    "SKU-1051": {
+      "date": "2026-06-28 22:06:02",
+      "category": "Kitchen",
+      "price_bucket": "Kitchen|overstock|losing_box",
+      "ad_bucket": "Kitchen|mid_acos",
+      "price_intent": "DROP_PRICE",
+      "old_price": 59.04,
+      "new_price": 52.34,
+      "ad_intent": "MAINTAIN_ADS",
+      "bid_change_pct": 0.0,
+      "pre": {
+        "price": 59.04,
+        "cogs": 20.89,
+        "fba_fee": 7.23,
+        "referral_pct": 0.08,
+        "velocity": 94,
+        "ad_spend": 84.36
+      }
+    },
+    "SKU-1052": {
+      "date": "2026-06-28 22:06:02",
+      "category": "Kitchen",
+      "price_bucket": "Kitchen|overstock|winning_box",
+      "ad_bucket": "Kitchen|high_acos",
+      "price_intent": "RAISE_PRICE_SLIGHTLY",
+      "old_price": 19.28,
+      "new_price": 19.67,
+      "ad_intent": "MAINTAIN_ADS",
+      "bid_change_pct": 0.0,
+      "pre": {
+        "price": 19.28,
+        "cogs": 5.06,
+        "fba_fee": 5.42,
+        "referral_pct": 0.15,
+        "velocity": 313,
+        "ad_spend": 717.06
+      }
+    },
+    "SKU-1053": {
+      "date": "2026-06-28 22:06:02",
+      "category": "Kitchen",
+      "price_bucket": "Kitchen|healthy|losing_box",
+      "ad_bucket": "Kitchen|low_acos",
+      "price_intent": "HOLD_PRICE",
+      "old_price": 48.25,
+      "new_price": 48.25,
+      "ad_intent": "INCREASE_BIDS",
+      "bid_change_pct": 0.2,
+      "pre": {
+        "price": 48.25,
+        "cogs": 17.78,
+        "fba_fee": 6.85,
+        "referral_pct": 0.08,
+        "velocity": 223,
+        "ad_spend": 324.28
+      }
+    },
+    "SKU-1054": {
+      "date": "2026-06-28 22:06:02",
+      "category": "Kitchen",
+      "price_bucket": "Kitchen|healthy|winning_box",
+      "ad_bucket": "Kitchen|mid_acos",
+      "price_intent": "RAISE_PRICE_SLIGHTLY",
+      "old_price": 32.84,
+      "new_price": 33.5,
+      "ad_intent": "MAINTAIN_ADS",
+      "bid_change_pct": 0.0,
+      "pre": {
+        "price": 32.84,
+        "cogs": 7.15,
+        "fba_fee": 5.54,
+        "referral_pct": 0.08,
+        "velocity": 261,
+        "ad_spend": 377.52
+      }
+    },
+    "SKU-1055": {
+      "date": "2026-06-28 22:06:02",
+      "category": "Kitchen",
+      "price_bucket": "Kitchen|overstock|winning_box",
+      "ad_bucket": "Kitchen|high_acos",
+      "price_intent": "RAISE_PRICE_SLIGHTLY",
+      "old_price": 22.43,
+      "new_price": 22.88,
+      "ad_intent": "MAINTAIN_ADS",
+      "bid_change_pct": 0.0,
+      "pre": {
+        "price": 22.43,
+        "cogs": 5.84,
+        "fba_fee": 6.55,
+        "referral_pct": 0.12,
+        "velocity": 127,
+        "ad_spend": 449.28
+      }
+    },
+    "SKU-1071": {
+      "date": "2026-06-28 22:06:02",
+      "category": "Fitness",
+      "price_bucket": "Fitness|healthy|losing_box",
+      "ad_bucket": "Fitness|mid_acos",
+      "price_intent": "RAISE_PRICE_SLIGHTLY",
+      "old_price": 74.71,
+      "new_price": 76.2,
+      "ad_intent": "MAINTAIN_ADS",
+      "bid_change_pct": 0.0,
+      "pre": {
+        "price": 74.71,
+        "cogs": 18.66,
+        "fba_fee": 4.97,
+        "referral_pct": 0.15,
+        "velocity": 379,
+        "ad_spend": 619.85
+      }
+    },
+    "SKU-1072": {
+      "date": "2026-06-28 22:06:02",
+      "category": "Fitness",
+      "price_bucket": "Fitness|overstock|losing_box",
+      "ad_bucket": "Fitness|mid_acos",
+      "price_intent": "RAISE_PRICE_SLIGHTLY",
+      "old_price": 75.15,
+      "new_price": 76.65,
+      "ad_intent": "MAINTAIN_ADS",
+      "bid_change_pct": 0.0,
+      "pre": {
+        "price": 75.15,
+        "cogs": 22.43,
+        "fba_fee": 4.88,
+        "referral_pct": 0.1,
+        "velocity": 47,
+        "ad_spend": 125.8
+      }
+    },
+    "SKU-1079": {
+      "date": "2026-06-28 22:06:02",
+      "category": "Travel",
+      "price_bucket": "Travel|overstock|losing_box",
+      "ad_bucket": "Travel|high_acos",
+      "price_intent": "RAISE_PRICE_SLIGHTLY",
+      "old_price": 44.44,
+      "new_price": 45.33,
+      "ad_intent": "MAINTAIN_ADS",
+      "bid_change_pct": 0.0,
+      "pre": {
+        "price": 44.44,
+        "cogs": 17.74,
+        "fba_fee": 3.81,
+        "referral_pct": 0.12,
+        "velocity": 207,
+        "ad_spend": 927.96
+      }
+    },
+    "SKU-1083": {
+      "date": "2026-06-28 22:06:02",
+      "category": "Lighting",
+      "price_bucket": "Lighting|overstock|losing_box",
+      "ad_bucket": "Lighting|mid_acos",
+      "price_intent": "DROP_PRICE",
+      "old_price": 68.98,
+      "new_price": 64.83,
+      "ad_intent": "MAINTAIN_ADS",
+      "bid_change_pct": 0.0,
+      "pre": {
+        "price": 68.98,
+        "cogs": 22.9,
+        "fba_fee": 3.55,
+        "referral_pct": 0.1,
+        "velocity": 185,
+        "ad_spend": 473.2
+      }
+    },
+    "SKU-1086": {
+      "date": "2026-06-28 22:06:02",
+      "category": "Kitchen",
+      "price_bucket": "Kitchen|critical|losing_box",
+      "ad_bucket": "Kitchen|high_acos",
+      "price_intent": "RAISE_PRICE",
+      "old_price": 24.62,
+      "new_price": 25.85,
+      "ad_intent": "MAINTAIN_ADS",
+      "bid_change_pct": 0.0,
+      "pre": {
+        "price": 24.62,
+        "cogs": 7.56,
+        "fba_fee": 6.24,
+        "referral_pct": 0.12,
+        "velocity": 58,
+        "ad_spend": 945.14
+      }
+    },
+    "SKU-1089": {
+      "date": "2026-06-28 22:06:02",
+      "category": "Kitchen",
+      "price_bucket": "Kitchen|healthy|winning_box",
+      "ad_bucket": "Kitchen|mid_acos",
+      "price_intent": "RAISE_PRICE_SLIGHTLY",
+      "old_price": 51.8,
+      "new_price": 52.84,
+      "ad_intent": "MAINTAIN_ADS",
+      "bid_change_pct": 0.0,
+      "pre": {
+        "price": 51.8,
+        "cogs": 11.76,
+        "fba_fee": 4.77,
+        "referral_pct": 0.15,
+        "velocity": 228,
+        "ad_spend": 132.72
+      }
+    },
+    "SKU-1091": {
+      "date": "2026-06-28 22:06:02",
+      "category": "Travel",
+      "price_bucket": "Travel|healthy|losing_box",
+      "ad_bucket": "Travel|low_acos",
+      "price_intent": "HOLD_PRICE",
+      "old_price": 70.39,
+      "new_price": 70.39,
+      "ad_intent": "INCREASE_BIDS",
+      "bid_change_pct": 0.2,
+      "pre": {
+        "price": 70.39,
+        "cogs": 18.01,
+        "fba_fee": 5.29,
+        "referral_pct": 0.08,
+        "velocity": 665,
+        "ad_spend": 961.38
+      }
+    },
+    "SKU-1092": {
+      "date": "2026-06-28 22:06:02",
+      "category": "Travel",
+      "price_bucket": "Travel|critical|losing_box",
+      "ad_bucket": "Travel|high_acos",
+      "price_intent": "RAISE_PRICE_SLIGHTLY",
+      "old_price": 50.58,
+      "new_price": 51.59,
+      "ad_intent": "MAINTAIN_ADS",
+      "bid_change_pct": 0.0,
+      "pre": {
+        "price": 50.58,
+        "cogs": 15.77,
+        "fba_fee": 5.2,
+        "referral_pct": 0.12,
+        "velocity": 134,
+        "ad_spend": 359.9
+      }
+    }
+  },
+  "policy": {
+    "Outdoor|healthy|losing_box": {
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 7,
+        "total_reward": -776.13,
+        "avg_reward": -110.88
+      },
+      "DROP_PRICE": {
+        "count": 7,
+        "total_reward": -2712.25,
+        "avg_reward": -387.46
+      },
+      "HOLD_PRICE": {
+        "count": 1,
+        "total_reward": 882.79,
+        "avg_reward": 882.79
+      }
+    },
+    "Outdoor|mid_acos": {
+      "LOWER_BIDS": {
+        "count": 12,
+        "total_reward": -150.0,
+        "avg_reward": -12.5
+      },
+      "MAINTAIN_ADS": {
+        "count": 21,
+        "total_reward": -12179.47,
+        "avg_reward": -579.97
+      }
+    },
+    "Outdoor|overstock|winning_box": {
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 9,
+        "total_reward": -25.0,
+        "avg_reward": -2.78
+      },
+      "HOLD_PRICE": {
+        "count": 1,
+        "total_reward": -25.0,
+        "avg_reward": -25.0
+      },
+      "DROP_PRICE": {
+        "count": 1,
+        "total_reward": -2864.01,
+        "avg_reward": -2864.01
+      }
+    },
+    "Outdoor|critical|winning_box": {
+      "HOLD_PRICE": {
+        "count": 5,
+        "total_reward": -300.0,
+        "avg_reward": -60.0
+      },
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 3,
+        "total_reward": -1789.93,
+        "avg_reward": -596.64
+      }
+    },
+    "Outdoor|high_acos": {
+      "LOWER_BIDS": {
+        "count": 6,
+        "total_reward": -250.0,
+        "avg_reward": -41.67
+      },
+      "MAINTAIN_ADS": {
+        "count": 6,
+        "total_reward": -1452.0,
+        "avg_reward": -242.0
+      },
+      "INCREASE_BIDS": {
+        "count": 2,
+        "total_reward": 164.52,
+        "avg_reward": 82.26
+      }
+    },
+    "Outdoor|healthy|winning_box": {
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 5,
+        "total_reward": -25.0,
+        "avg_reward": -5.0
+      },
+      "HOLD_PRICE": {
+        "count": 5,
+        "total_reward": -999.55,
+        "avg_reward": -199.91
+      }
+    },
+    "Electronics Accessories|healthy|winning_box": {
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 9,
+        "total_reward": 513.8,
+        "avg_reward": 57.09
+      }
+    },
+    "Electronics Accessories|mid_acos": {
+      "LOWER_BIDS": {
+        "count": 4,
+        "total_reward": -100.0,
+        "avg_reward": -25.0
+      },
+      "MAINTAIN_ADS": {
+        "count": 7,
+        "total_reward": -5803.72,
+        "avg_reward": -829.1
+      }
+    },
+    "Electronics Accessories|low_acos": {
+      "INCREASE_BIDS": {
+        "count": 6,
+        "total_reward": 169.33,
+        "avg_reward": 28.22
+      },
+      "MAINTAIN_ADS": {
+        "count": 1,
+        "total_reward": -50.0,
+        "avg_reward": -50.0
+      }
+    },
+    "Fitness|overstock|losing_box": {
+      "HOLD_PRICE": {
+        "count": 3,
+        "total_reward": -25.0,
+        "avg_reward": -8.33
+      },
+      "DROP_PRICE": {
+        "count": 3,
+        "total_reward": -1574.07,
+        "avg_reward": -524.69
+      },
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 4,
+        "total_reward": 648.94,
+        "avg_reward": 162.24
+      }
+    },
+    "Fitness|mid_acos": {
+      "LOWER_BIDS": {
+        "count": 7,
+        "total_reward": -100.0,
+        "avg_reward": -14.29
+      },
+      "MAINTAIN_ADS": {
+        "count": 8,
+        "total_reward": -1392.95,
+        "avg_reward": -174.12
+      },
+      "INCREASE_BIDS": {
+        "count": 2,
+        "total_reward": 0.0,
+        "avg_reward": 0.0
+      }
+    },
+    "Fitness|critical|losing_box": {
+      "HOLD_PRICE": {
+        "count": 1,
+        "total_reward": -75.0,
+        "avg_reward": -75.0
+      },
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 4,
+        "total_reward": -225.0,
+        "avg_reward": -56.25
+      },
+      "RAISE_PRICE": {
+        "count": 1,
+        "total_reward": -510.48,
+        "avg_reward": -510.48
+      }
+    },
+    "Fitness|high_acos": {
+      "LOWER_BIDS": {
+        "count": 10,
+        "total_reward": -500.0,
+        "avg_reward": -50.0
+      },
+      "MAINTAIN_ADS": {
+        "count": 11,
+        "total_reward": -2463.26,
+        "avg_reward": -223.93
+      }
+    },
+    "Fitness|overstock|winning_box": {
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 7,
+        "total_reward": -50.0,
+        "avg_reward": -7.14
+      },
+      "HOLD_PRICE": {
+        "count": 5,
+        "total_reward": -295.44,
+        "avg_reward": -59.09
+      }
+    },
+    "Fitness|low_acos": {
+      "INCREASE_BIDS": {
+        "count": 6,
+        "total_reward": -295.44,
+        "avg_reward": -49.24
+      },
+      "MAINTAIN_ADS": {
+        "count": 3,
+        "total_reward": -50.0,
+        "avg_reward": -16.67
+      }
+    },
+    "Home Decor|overstock|winning_box": {
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 3,
+        "total_reward": -10.1,
+        "avg_reward": -3.37
+      }
+    },
+    "Home Decor|high_acos": {
+      "LOWER_BIDS": {
+        "count": 4,
+        "total_reward": -200.0,
+        "avg_reward": -50.0
+      },
+      "MAINTAIN_ADS": {
+        "count": 1,
+        "total_reward": 39.9,
+        "avg_reward": 39.9
+      }
+    },
+    "Home Decor|critical|winning_box": {
+      "HOLD_PRICE": {
+        "count": 2,
+        "total_reward": -150.0,
+        "avg_reward": -75.0
+      }
+    },
+    "Outdoor|low_acos": {
+      "INCREASE_BIDS": {
+        "count": 5,
+        "total_reward": -281.28,
+        "avg_reward": -56.26
+      },
+      "MAINTAIN_ADS": {
+        "count": 4,
+        "total_reward": -6148.67,
+        "avg_reward": -1537.17
+      }
+    },
+    "Travel|critical|winning_box": {
+      "HOLD_PRICE": {
+        "count": 3,
+        "total_reward": -200.0,
+        "avg_reward": -66.67
+      },
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 4,
+        "total_reward": -298.69,
+        "avg_reward": -74.67
+      }
+    },
+    "Travel|high_acos": {
+      "LOWER_BIDS": {
+        "count": 7,
+        "total_reward": -325.0,
+        "avg_reward": -46.43
+      },
+      "MAINTAIN_ADS": {
+        "count": 8,
+        "total_reward": -1020.76,
+        "avg_reward": -127.59
+      },
+      "INCREASE_BIDS": {
+        "count": 2,
+        "total_reward": -567.04,
+        "avg_reward": -283.52
+      }
+    },
+    "Pet Supplies|critical|winning_box": {
+      "HOLD_PRICE": {
+        "count": 2,
+        "total_reward": -100.0,
+        "avg_reward": -50.0
+      },
+      "RAISE_PRICE": {
+        "count": 2,
+        "total_reward": -150.0,
+        "avg_reward": -75.0
+      }
+    },
+    "Pet Supplies|mid_acos": {
+      "LOWER_BIDS": {
+        "count": 4,
+        "total_reward": -100.0,
+        "avg_reward": -25.0
+      },
+      "MAINTAIN_ADS": {
+        "count": 3,
+        "total_reward": -315.69,
+        "avg_reward": -105.23
+      }
+    },
+    "Pet Supplies|healthy|losing_box": {
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 3,
+        "total_reward": 0.81,
+        "avg_reward": 0.27
+      },
+      "DROP_PRICE": {
+        "count": 1,
+        "total_reward": -25.0,
+        "avg_reward": -25.0
+      }
+    },
+    "Pet Supplies|high_acos": {
+      "LOWER_BIDS": {
+        "count": 4,
+        "total_reward": -200.0,
+        "avg_reward": -50.0
+      },
+      "MAINTAIN_ADS": {
+        "count": 4,
+        "total_reward": 149.85,
+        "avg_reward": 37.46
+      }
+    },
+    "Kitchen|healthy|winning_box": {
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 20,
+        "total_reward": 9177.28,
+        "avg_reward": 458.86
+      },
+      "HOLD_PRICE": {
+        "count": 1,
+        "total_reward": -25.0,
+        "avg_reward": -25.0
+      },
+      "RAISE_PRICE": {
+        "count": 1,
+        "total_reward": -179.07,
+        "avg_reward": -179.07
+      }
+    },
+    "Kitchen|low_acos": {
+      "INCREASE_BIDS": {
+        "count": 18,
+        "total_reward": 6411.28,
+        "avg_reward": 356.18
+      },
+      "MAINTAIN_ADS": {
+        "count": 5,
+        "total_reward": -250.0,
+        "avg_reward": -50.0
+      }
+    },
+    "Kitchen|overstock|losing_box": {
+      "HOLD_PRICE": {
+        "count": 7,
+        "total_reward": 520.74,
+        "avg_reward": 74.39
+      }
+    },
+    "Kitchen|mid_acos": {
+      "LOWER_BIDS": {
+        "count": 9,
+        "total_reward": -50.0,
+        "avg_reward": -5.56
+      },
+      "MAINTAIN_ADS": {
+        "count": 12,
+        "total_reward": 3330.87,
+        "avg_reward": 277.57
+      }
+    },
+    "Kitchen|high_acos": {
+      "LOWER_BIDS": {
+        "count": 3,
+        "total_reward": -175.0,
+        "avg_reward": -58.33
+      },
+      "MAINTAIN_ADS": {
+        "count": 10,
+        "total_reward": -951.17,
+        "avg_reward": -95.12
+      }
+    },
+    "Lighting|healthy|winning_box": {
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 5,
+        "total_reward": -50.0,
+        "avg_reward": -10.0
+      },
+      "HOLD_PRICE": {
+        "count": 2,
+        "total_reward": -50.0,
+        "avg_reward": -25.0
+      },
+      "DROP_PRICE": {
+        "count": 2,
+        "total_reward": -176.88,
+        "avg_reward": -88.44
+      }
+    },
+    "Lighting|mid_acos": {
+      "MAINTAIN_ADS": {
+        "count": 10,
+        "total_reward": -17685.29,
+        "avg_reward": -1768.53
+      },
+      "LOWER_BIDS": {
+        "count": 4,
+        "total_reward": -100.0,
+        "avg_reward": -25.0
+      }
+    },
+    "Lighting|high_acos": {
+      "LOWER_BIDS": {
+        "count": 4,
+        "total_reward": -100.0,
+        "avg_reward": -25.0
+      },
+      "MAINTAIN_ADS": {
+        "count": 2,
+        "total_reward": -176.88,
+        "avg_reward": -88.44
+      }
+    },
+    "Outdoor|overstock|losing_box": {
+      "HOLD_PRICE": {
+        "count": 2,
+        "total_reward": -25.0,
+        "avg_reward": -12.5
+      },
+      "DROP_PRICE": {
+        "count": 4,
+        "total_reward": -5747.28,
+        "avg_reward": -1436.82
+      },
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 4,
+        "total_reward": -1481.8,
+        "avg_reward": -370.45
+      }
+    },
+    "Fitness|healthy|winning_box": {
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 4,
+        "total_reward": -25.0,
+        "avg_reward": -6.25
+      },
+      "RAISE_PRICE": {
+        "count": 2,
+        "total_reward": 0.0,
+        "avg_reward": 0.0
+      },
+      "HOLD_PRICE": {
+        "count": 1,
+        "total_reward": 0.0,
+        "avg_reward": 0.0
+      }
+    },
+    "Travel|healthy|winning_box": {
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 4,
+        "total_reward": -50.0,
+        "avg_reward": -12.5
+      },
+      "DROP_PRICE": {
+        "count": 3,
+        "total_reward": -1111.74,
+        "avg_reward": -370.58
+      }
+    },
+    "Travel|overstock|winning_box": {
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 3,
+        "total_reward": -75.0,
+        "avg_reward": -25.0
+      },
+      "HOLD_PRICE": {
+        "count": 2,
+        "total_reward": -567.04,
+        "avg_reward": -283.52
+      }
+    },
+    "Kitchen|critical|losing_box": {
+      "HOLD_PRICE": {
+        "count": 3,
+        "total_reward": -175.0,
+        "avg_reward": -58.33
+      },
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 3,
+        "total_reward": -150.0,
+        "avg_reward": -50.0
+      },
+      "RAISE_PRICE": {
+        "count": 2,
+        "total_reward": -2159.41,
+        "avg_reward": -1079.7
+      }
+    },
+    "Travel|healthy|losing_box": {
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 3,
+        "total_reward": -630.65,
+        "avg_reward": -210.22
+      },
+      "DROP_PRICE": {
+        "count": 3,
+        "total_reward": -727.59,
+        "avg_reward": -242.53
+      },
+      "HOLD_PRICE": {
+        "count": 1,
+        "total_reward": 3640.6,
+        "avg_reward": 3640.6
+      }
+    },
+    "Fitness|critical|winning_box": {
+      "HOLD_PRICE": {
+        "count": 2,
+        "total_reward": -150.0,
+        "avg_reward": -75.0
+      },
+      "RAISE_PRICE": {
+        "count": 3,
+        "total_reward": -229.48,
+        "avg_reward": -76.49
+      },
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 3,
+        "total_reward": -2316.89,
+        "avg_reward": -772.3
+      }
+    },
+    "Electronics Accessories|overstock|winning_box": {
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 3,
+        "total_reward": -195.95,
+        "avg_reward": -65.32
+      }
+    },
+    "Electronics Accessories|high_acos": {
+      "LOWER_BIDS": {
+        "count": 4,
+        "total_reward": -200.0,
+        "avg_reward": -50.0
+      },
+      "MAINTAIN_ADS": {
+        "count": 3,
+        "total_reward": 932.09,
+        "avg_reward": 310.7
+      }
+    },
+    "Electronics Accessories|critical|losing_box": {
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 3,
+        "total_reward": -4350.29,
+        "avg_reward": -1450.1
+      }
+    },
+    "Fitness|healthy|losing_box": {
+      "DROP_PRICE": {
+        "count": 3,
+        "total_reward": -54.65,
+        "avg_reward": -18.22
+      },
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 1,
+        "total_reward": 80.42,
+        "avg_reward": 80.42
+      }
+    },
+    "Electronics Accessories|critical|winning_box": {
+      "HOLD_PRICE": {
+        "count": 3,
+        "total_reward": -200.0,
+        "avg_reward": -66.67
+      }
+    },
+    "Home Decor|critical|losing_box": {
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 2,
+        "total_reward": -100.0,
+        "avg_reward": -50.0
+      },
+      "RAISE_PRICE": {
+        "count": 1,
+        "total_reward": 244.99,
+        "avg_reward": 244.99
+      }
+    },
+    "Home Decor|mid_acos": {
+      "MAINTAIN_ADS": {
+        "count": 6,
+        "total_reward": 159.6,
+        "avg_reward": 26.6
+      },
+      "LOWER_BIDS": {
+        "count": 3,
+        "total_reward": -3419.06,
+        "avg_reward": -1139.69
+      }
+    },
+    "Travel|overstock|losing_box": {
+      "DROP_PRICE": {
+        "count": 2,
+        "total_reward": -2324.95,
+        "avg_reward": -1162.47
+      },
+      "HOLD_PRICE": {
+        "count": 3,
+        "total_reward": -168.71,
+        "avg_reward": -56.24
+      },
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 3,
+        "total_reward": 206.49,
+        "avg_reward": 68.83
+      }
+    },
+    "Travel|mid_acos": {
+      "MAINTAIN_ADS": {
+        "count": 10,
+        "total_reward": -5301.34,
+        "avg_reward": -530.13
+      },
+      "LOWER_BIDS": {
+        "count": 7,
+        "total_reward": -50.0,
+        "avg_reward": -7.14
+      }
+    },
+    "Lighting|healthy|losing_box": {
+      "DROP_PRICE": {
+        "count": 3,
+        "total_reward": -440.39,
+        "avg_reward": -146.8
+      },
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 1,
+        "total_reward": -4667.93,
+        "avg_reward": -4667.93
+      }
+    },
+    "Lighting|low_acos": {
+      "INCREASE_BIDS": {
+        "count": 3,
+        "total_reward": -440.39,
+        "avg_reward": -146.8
+      }
+    },
+    "Lighting|overstock|winning_box": {
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 5,
+        "total_reward": -306.83,
+        "avg_reward": -61.37
+      }
+    },
+    "Kitchen|healthy|losing_box": {
+      "DROP_PRICE": {
+        "count": 3,
+        "total_reward": -602.71,
+        "avg_reward": -200.9
+      },
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 3,
+        "total_reward": -470.73,
+        "avg_reward": -156.91
+      },
+      "HOLD_PRICE": {
+        "count": 4,
+        "total_reward": -1141.82,
+        "avg_reward": -285.45
+      },
+      "RAISE_PRICE": {
+        "count": 1,
+        "total_reward": -43.72,
+        "avg_reward": -43.72
+      }
+    },
+    "Lighting|critical|losing_box": {
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 3,
+        "total_reward": -10557.4,
+        "avg_reward": -3519.13
+      }
+    },
+    "Lighting|critical|winning_box": {
+      "HOLD_PRICE": {
+        "count": 1,
+        "total_reward": -50.0,
+        "avg_reward": -50.0
+      }
+    },
+    "Home Decor|healthy|losing_box": {
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 2,
+        "total_reward": -3419.06,
+        "avg_reward": -1709.53
+      },
+      "DROP_PRICE": {
+        "count": 3,
+        "total_reward": -1266.68,
+        "avg_reward": -422.23
+      }
+    },
+    "Pet Supplies|healthy|winning_box": {
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 5,
+        "total_reward": -315.69,
+        "avg_reward": -63.14
+      }
+    },
+    "Kitchen|critical|winning_box": {
+      "HOLD_PRICE": {
+        "count": 2,
+        "total_reward": -125.0,
+        "avg_reward": -62.5
+      },
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 3,
+        "total_reward": 3480.87,
+        "avg_reward": 1160.29
+      }
+    },
+    "Outdoor|critical|losing_box": {
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 2,
+        "total_reward": -4408.74,
+        "avg_reward": -2204.37
+      }
+    },
+    "Kitchen|overstock|winning_box": {
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 3,
+        "total_reward": 64.59,
+        "avg_reward": 21.53
+      },
+      "RAISE_PRICE": {
+        "count": 1,
+        "total_reward": 144.96,
+        "avg_reward": 144.96
+      }
+    },
+    "Electronics Accessories|overstock|losing_box": {
+      "DROP_PRICE": {
+        "count": 1,
+        "total_reward": -1198.7,
+        "avg_reward": -1198.7
+      },
+      "HOLD_PRICE": {
+        "count": 1,
+        "total_reward": 39.31,
+        "avg_reward": 39.31
+      }
+    },
+    "Electronics Accessories|healthy|losing_box": {
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 1,
+        "total_reward": -114.79,
+        "avg_reward": -114.79
+      },
+      "DROP_PRICE": {
+        "count": 3,
+        "total_reward": 481.24,
+        "avg_reward": 160.41
+      },
+      "HOLD_PRICE": {
+        "count": 1,
+        "total_reward": -26.92,
+        "avg_reward": -26.92
+      }
+    },
+    "Home Decor|healthy|winning_box": {
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 1,
+        "total_reward": 1281.29,
+        "avg_reward": 1281.29
+      }
+    },
+    "Pet Supplies|overstock|winning_box": {
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 2,
+        "total_reward": 124.04,
+        "avg_reward": 62.02
+      }
+    },
+    "Travel|critical|losing_box": {
+      "RAISE_PRICE_SLIGHTLY": {
+        "count": 2,
+        "total_reward": -1484.97,
+        "avg_reward": -742.49
+      }
+    },
+    "Travel|low_acos": {
+      "INCREASE_BIDS": {
+        "count": 2,
+        "total_reward": 3471.89,
+        "avg_reward": 1735.94
+      }
+    },
+    "Lighting|overstock|losing_box": {
+      "DROP_PRICE": {
+        "count": 1,
+        "total_reward": -2203.13,
+        "avg_reward": -2203.13
+      }
+    }
+  },
+  "review_queue": [],
+  "last_input_path": "uploaded_input.csv",
+  "last_input_filename": "master_sku_data_day6.csv",
+  "last_learn_notes": [
+    "graded 20 prior decisions, total reward -1690.23",
+    "  SKU-1005 [HOLD_PRICE/INCREASE_BIDS] reward +882.79 (\u0394profit -2476.30->-1593.51 = +882.79)",
+    "  SKU-1007 [RAISE_PRICE_SLIGHTLY/INCREASE_BIDS] reward +2904.00 (\u0394profit 17571.86->20475.86 = +2904.00)",
+    "  SKU-1009 [HOLD_PRICE/INCREASE_BIDS] reward +817.90 (\u0394profit 8879.95->9697.85 = +817.90)",
+    "  SKU-1012 [DROP_PRICE/MAINTAIN_ADS] reward +166.69 (\u0394profit 1426.57->1593.26 = +166.69)",
+    "  SKU-1014 [HOLD_PRICE/INCREASE_BIDS] reward -26.92 (\u0394profit 1238.28->1211.36 = -26.92)",
+    "  SKU-1015 [RAISE_PRICE_SLIGHTLY/MAINTAIN_ADS] reward -164.28 (\u0394profit 6855.06->6715.78 = -139.28; ACOS penalty -25 (ACOS=52.40%))",
+    "  SKU-1017 [RAISE_PRICE_SLIGHTLY/MAINTAIN_ADS] reward +80.42 (\u0394profit -653.60->-548.18 = +105.42; ACOS penalty -25 (ACOS=38.47%))",
+    "  SKU-1038 [RAISE_PRICE_SLIGHTLY/MAINTAIN_ADS] reward -166.42 (\u0394profit 9752.45->9611.03 = -141.42; ACOS penalty -25 (ACOS=38.22%))",
+    "  SKU-1039 [HOLD_PRICE/INCREASE_BIDS] reward -168.71 (\u0394profit 2377.60->2208.89 = -168.71)",
+    "  SKU-1041 [DROP_PRICE/MAINTAIN_ADS] reward -2864.01 (\u0394profit 15433.85->12569.84 = -2864.01)",
+    "  SKU-1048 [RAISE_PRICE_SLIGHTLY/MAINTAIN_ADS] reward +189.58 (\u0394profit 323.49->538.07 = +214.58; ACOS penalty -25 (ACOS=35.62%))",
+    "  SKU-1053 [HOLD_PRICE/INCREASE_BIDS] reward -3245.56 (\u0394profit 7327.76->4082.20 = -3245.56)",
+    "  SKU-1054 [RAISE_PRICE_SLIGHTLY/MAINTAIN_ADS] reward +620.57 (\u0394profit 3575.36->4195.93 = +620.57)",
+    "  SKU-1055 [RAISE_PRICE_SLIGHTLY/MAINTAIN_ADS] reward +16.84 (\u0394profit 442.13->483.97 = +41.84; ACOS penalty -25 (ACOS=38.52%))",
+    "  SKU-1059 [DROP_PRICE/MAINTAIN_ADS] reward -655.04 (\u0394profit 24522.79->23892.75 = -630.04; ACOS penalty -25 (ACOS=53.32%))",
+    "  SKU-1083 [DROP_PRICE/MAINTAIN_ADS] reward -2203.13 (\u0394profit 8321.85->6118.72 = -2203.13)",
+    "  SKU-1089 [RAISE_PRICE_SLIGHTLY/MAINTAIN_ADS] reward +0.22 (\u0394profit 6137.06->6137.28 = +0.22)",
+    "  SKU-1091 [HOLD_PRICE/INCREASE_BIDS] reward +3640.60 (\u0394profit 22968.12->26608.72 = +3640.60)",
+    "  SKU-1093 [RAISE_PRICE_SLIGHTLY/MAINTAIN_ADS] reward -588.00 (\u0394profit 2948.78->2360.78 = -588.00)",
+    "  SKU-1011 [DROP_PRICE/MAINTAIN_ADS] reward -927.77 (\u0394profit 1883.77->981.00 = -902.77; ACOS penalty -25 (ACOS=37.25%))"
+  ]
+}

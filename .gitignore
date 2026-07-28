@@ -1,0 +1,11 @@
+# secrets - never commit the filled-in key
+.env
+
+# generated audit trail
+amazon_daily_metrics.csv
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/

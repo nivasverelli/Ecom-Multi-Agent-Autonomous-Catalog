@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>unybrands Amazon Catalog Cockpit</title>
+  <!-- Outfit & Inter Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="app-sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo"><span class="uny">uny</span><span class="brands">brands</span></div>
+        <div class="sidebar-sub">AMAZON CATALOG COCKPIT</div>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <button class="nav-item active" data-page="chat">
+          <span class="icon">💬</span> Copilot Chat
+        </button>
+        <button class="nav-item" data-page="dashboard">
+          <span class="icon">📊</span> Dashboard
+        </button>
+        <button class="nav-item" data-page="brain">
+          <span class="icon">🧠</span> Manager Brain
+        </button>
+        <button class="nav-item" data-page="data">
+          <span class="icon">📁</span> Data & History
+        </button>
+        <button class="nav-item" data-page="review">
+          <span class="icon">🔔</span> Review Queue <span class="badge" id="review-badge" style="display:none;">0</span>
+        </button>
+      </nav>
+      
+      <div class="sidebar-footer">
+        <button class="btn btn-secondary btn-sm" id="btn-reset">Reset Learning</button>
+      </div>
+    </aside>
+
+    <!-- Main Content Frame -->
+    <main class="app-content">
+      
+      <!-- Page: Chat View (Default) -->
+      <section class="page-view active" id="view-chat">
+        <div class="chat-header">
+          <div class="intro">
+            <h1>AI Copilot</h1>
+            <p>Talk to the catalog optimization agent. Review decisions, request rationale, or ask policy questions.</p>
+          </div>
+          
+          <!-- Floating dynamic metrics header -->
+          <div class="live-stats-bar" id="live-stats" style="display:none;">
+            <div class="metric-item">🟢 Profit Impact: <b class="green" id="live-profit">+$0</b></div>
+            <div class="metric-item">🔵 Revenue Impact: <b class="blue" id="live-revenue">+$0</b></div>
+            <div class="metric-item">🟡 Awaiting Review: <b class="amber" id="live-review">0</b></div>
+          </div>
+        </div>
+
+        <div class="chat-main">
+          
+          <!-- Welcomer / Run configuration panel when decisions aren't loaded -->
+          <div class="welcome-card" id="welcome-panel">
+            <div class="welcome-title"><span class="uny">uny</span><span class="brands">brands</span> Copilot</div>
+            <div class="welcome-desc">Welcome to your Amazon Catalog Optimization Assistant. Connect a catalog data source and execute the agent to start.</div>
+            
+            <div class="run-controls">
+              <div class="source-picker">
+                <label class="radio-label">
+                  <input type="radio" name="input_source" value="master_sku_data.xlsx" checked>
+                  <span>master_sku_data.xlsx</span>
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="input_source" value="Upload a CSV">
+                  <span>Upload a CSV</span>
+                </label>
+              </div>
+              
+              <div class="upload-area" id="csv-upload-box" style="display:none;">
+                <input type="file" id="catalog-file-input" accept=".csv" style="display:none;">
+                <button class="btn btn-secondary btn-sm" id="btn-upload-trigger">Choose CSV File</button>
+                <span class="upload-status" id="upload-status-text">No file chosen</span>
+              </div>
+              
+              <button class="btn btn-primary" id="btn-run-optimization">Run Optimization Pipeline ▸</button>
+            </div>
+          </div>
+
+          <!-- Active run panel inside Chat (minimizable run stats config card) -->
+          <div class="active-run-panel" id="active-run-controls" style="display:none;">
+            <details class="collapsible-run-card">
+              <summary>Catalog Input & Execution Panel</summary>
+              <div class="collapsible-content">
+                <div class="run-controls row">
+                  <div class="source-picker">
+                    <label class="radio-label">
+                      <input type="radio" name="active_input_source" value="master_sku_data.xlsx" checked>
+                      <span>master_sku_data.xlsx</span>
+                    </label>
+                    <label class="radio-label">
+                      <input type="radio" name="active_input_source" value="Upload a CSV">
+                      <span>Upload a CSV</span>
+                    </label>
+                  </div>
+                  <div class="upload-area inline" id="active-csv-upload-box" style="display:none;">
+                    <input type="file" id="active-catalog-file-input" accept=".csv" style="display:none;">
+                    <button class="btn btn-secondary btn-sm" id="btn-active-upload-trigger">Choose File</button>
+                    <span class="upload-status" id="active-upload-status-text">No file chosen</span>
+                  </div>
+                  <button class="btn btn-primary btn-sm" id="btn-active-run">Run ▸</button>
+                </div>
+              </div>
+            </details>
+          </div>
+
+          <!-- Messages pane -->
+          <div class="chat-feed" id="chat-messages" style="display:none;">
+            <!-- Rendered dynamically -->
+          </div>
+          
+          <!-- Action suggestions chips -->
+          <div class="chat-chips-area" id="chat-chips-box" style="display:none;">
+            <div class="chip-label">Ask Copilot</div>
+            <div class="chips-row">
+              <button class="chip-item" data-prompt="Why did you make your most impactful price change?">Why did you make your most impactful price change?</button>
+              <button class="chip-item" data-prompt="Which calls came from your RL memory vs the LLM?">Which calls came from your RL memory vs the LLM?</button>
+              <button class="chip-item" data-prompt="What has your memory learned so far?">What has your memory learned so far?</button>
+            </div>
+            <div class="chips-row">
+              <button class="chip-item" data-prompt="Which SKUs did you flag for me, and why?">Which SKUs did you flag for me, and why?</button>
+              <button class="chip-item" data-prompt="Summarise today's pricing changes by category.">Summarise today's pricing changes by category.</button>
+            </div>
+          </div>
+
+          <!-- Pending proposed chat actions -->
+          <div class="pending-actions-card" id="pending-actions-box" style="display:none;">
+            <div class="warning-alert">Proposed actions awaiting your approval</div>
+            <div class="pending-list" id="pending-actions-list">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+
+          <!-- Chat inputs -->
+          <div class="chat-input-container" id="chat-input-wrapper" style="display:none;">
+            <input type="text" class="chat-input" id="chat-input-field" placeholder="Ask about decisions, catalog changes, or policy...">
+            <button class="btn btn-primary" id="btn-send-message">Send</button>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Page: Dashboard View -->
+      <section class="page-view" id="view-dashboard">
+        <!-- Rendered dynamically or checked via State -->
+        <div class="no-data-msg">
+          No active catalog optimization run found. Please select your catalog and click <b>Run ▸</b> on the <b>Copilot Chat</b> page.
+        </div>
+        <div class="dashboard-content" style="display:none;">
+          <div class="intro">
+            <h1>Dashboard</h1>
+            <p>Business impact analysis, price movement chart, and decisions explainability ledger.</p>
+          </div>
+          
+          <div class="run-badge-line" id="dash-run-badge">✓ Analysed 0 SKUs at ...</div>
+          
+          <!-- Pi Opportunity Alerts -->
+          <div class="pi-alerts-container" id="dash-pi-alerts" style="display:none;">
+            <div class="pi-alerts-header">
+              <span class="pi-logo-tiny"><span class="uny">uny</span><span class="brands">brands</span> Pi</span>
+              <span class="pi-alerts-title">Autonomous Opportunity Alerts</span>
+            </div>
+            <div class="pi-alerts-list" id="dash-alerts-list">
+              <!-- Dynamically populated top 3 alerts -->
+            </div>
+          </div>
+          
+          <div class="kpi-grid">
+            <div class="kpi-card">
+              <div class="kpi-label">SKUs CHANGED</div>
+              <div class="kpi-val" id="dash-changed">0</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">AVG PRICE Δ</div>
+              <div class="kpi-val" id="dash-avg-price">+0.0%</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">PROJ. PROFIT IMPACT</div>
+              <div class="kpi-val green" id="dash-profit">+$0</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">PROJ. REVENUE IMPACT</div>
+              <div class="kpi-val blue" id="dash-revenue">+$0</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">AWAITING REVIEW</div>
+              <div class="kpi-val amber" id="dash-flagged">0</div>
+            </div>
+          </div>
+          <div class="stat-caption">Static projection (constant volume). Real price elasticity is learned across runs by the RL loop.</div>
+          
+          <!-- Custom Price Scatter Plot Chart -->
+          <div class="dashboard-section">
+            <h2>Price Old vs New</h2>
+            <div class="chart-container">
+              <canvas id="scatter-chart"></canvas>
+            </div>
+            <div class="stat-caption">Above the diagonal line = price raised · below = price dropped · hover any point for details.</div>
+          </div>
+          
+          <!-- Explainability Ledger -->
+          <div class="dashboard-section">
+            <h2>Explainability Ledger</h2>
+            <div class="table-filters">
+              <div class="filter-col">
+                <label>Category</label>
+                <select id="filter-category">
+                  <option value="all">All Categories</option>
+                </select>
+              </div>
+              <div class="filter-col">
+                <label>Price Move</label>
+                <select id="filter-intent">
+                  <option value="all">All Movements</option>
+                </select>
+              </div>
+              <div class="filter-col">
+                <label>Brain</label>
+                <select id="filter-brain">
+                  <option value="all">All Brains</option>
+                </select>
+              </div>
+              <div class="filter-col">
+                <label>Status</label>
+                <select id="filter-status">
+                  <option value="all">All Statuses</option>
+                  <option value="applied">Applied</option>
+                  <option value="flagged">Flagged</option>
+                  <option value="unchanged">Unchanged</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="ledger-table-wrap">
+              <table class="data-table" id="ledger-table">
+                <thead>
+                  <tr>
+                    <th>SKU</th>
+                    <th>Product</th>
+                    <th>Category</th>
+                    <th>Old $</th>
+                    <th>New $</th>
+                    <th>Price Move</th>
+                    <th>Ad Move</th>
+                    <th>Brain</th>
+                    <th>Conf.</th>
+                    <th>Agent Reasoning</th>
+                  </tr>
+                </thead>
+                <tbody id="ledger-table-body">
+                  <!-- Rendered dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Page: Manager Brain View -->
+      <section class="page-view" id="view-brain">
+        <div class="intro">
+          <h1>Manager Brain</h1>
+          <p>Agent cascading tiers configuration and learned reinforcement learning policies.</p>
+        </div>
+        
+        <div class="dashboard-section">
+          <h2>Tiered Cascade Framework</h2>
+          <p>Our catalog manager relies on a Tiered cascading orchestrator to evaluate and execute decisions:</p>
+          
+          <div class="flowchart-container">
+            <div class="flow-stage">
+              <div class="stage-number">Tier 1</div>
+              <div class="stage-title">Deterministic Guardrails</div>
+              <div class="stage-desc">Safe operational clamps enforcing baseline floors and margin caps.</div>
+            </div>
+            
+            <div class="flow-connector">↓</div>
+            
+            <div class="flow-stage">
+              <div class="stage-number">Tier 2</div>
+              <div class="stage-title">Reinforcement Learning (RL) Policy</div>
+              <div class="stage-desc">Real-time contextual bandits evaluating historical price-elasticity reward curves.</div>
+            </div>
+            
+            <div class="flow-connector">↓</div>
+            
+            <div class="flow-stage">
+              <div class="stage-number">Tier 3</div>
+              <div class="stage-title">LLM Cognitive Arbitration</div>
+              <div class="stage-desc">Invoked on high-conflict edge cases or complex competitive positioning queries.</div>
+            </div>
+            
+            <div class="flow-connector">↓</div>
+            
+            <div class="flow-stage gate">
+              <div class="stage-number">Gate</div>
+              <div class="stage-title">HITL Triage Queue</div>
+              <div class="stage-desc">Human-in-the-loop review for catalog changes exceeding risk thresholds.</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="dashboard-section">
+          <h2>What the Manager has Learned</h2>
+          <div class="policy-table-wrap">
+            <table class="data-table" id="policy-table">
+              <thead>
+                <tr>
+                  <th>Situation</th>
+                  <th>Action</th>
+                  <th>Times Tried</th>
+                  <th>Avg Reward ($)</th>
+                </tr>
+              </thead>
+              <tbody id="policy-table-body">
+                <!-- Rendered dynamically -->
+              </tbody>
+            </table>
+          </div>
+          <div class="policy-info-box" id="policy-empty-info" style="display:none;">
+            No reinforcement learning policy has been formed yet. The next execution will evaluate yesterday's choices and populate memory.
+          </div>
+        </div>
+      </section>
+
+      <!-- Page: Data & History View -->
+      <section class="page-view" id="view-data">
+        <div class="no-data-msg">
+          No active catalog optimization run found. Please select your catalog and click <b>Run ▸</b> on the <b>Copilot Chat</b> page.
+        </div>
+        <div class="data-content" style="display:none;">
+          <div class="intro">
+            <h1>Data & History</h1>
+            <p>Compare catalog uploads, track run history, and download decisions datasets.</p>
+          </div>
+          
+          <div class="dashboard-section">
+            <h2 id="loaded-catalog-title">Currently Loaded Catalog: ...</h2>
+            
+            <div class="comparison-grid" id="comparison-widgets" style="display:none;">
+              <div class="metric-card">
+                <div class="label">File Total Revenue</div>
+                <div class="value" id="comp-rev">$0</div>
+                <div class="pct-change" id="comp-rev-pct">+0.0% vs baseline</div>
+              </div>
+              <div class="metric-card">
+                <div class="label">File Average Price</div>
+                <div class="value" id="comp-price">$0.00</div>
+                <div class="pct-change" id="comp-price-pct">+0.0% vs baseline</div>
+              </div>
+              <div class="metric-card">
+                <div class="label">File Ad Spend</div>
+                <div class="value" id="comp-spend">$0</div>
+                <div class="pct-change" id="comp-spend-pct">+0.0% vs baseline</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="dashboard-section">
+            <h2>Execution Run History</h2>
+            <div class="history-table-wrap">
+              <table class="data-table" id="history-table">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Source</th>
+                    <th>N SKUs</th>
+                    <th>N Changed</th>
+                    <th>N Applied</th>
+                    <th>N Flagged</th>
+                  </tr>
+                </thead>
+                <tbody id="history-table-body">
+                  <!-- Rendered dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+          
+          <div class="dashboard-section">
+            <h2>Download Catalog Reports</h2>
+            <div class="download-row">
+              <a href="/api/download/decisions" class="btn btn-secondary download-btn">Decisions report (CSV)</a>
+              <a href="/api/download/master" class="btn btn-secondary download-btn">Updated master (CSV)</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Page: Review Queue View -->
+      <section class="page-view" id="view-review">
+        <div class="no-data-msg">
+          No active catalog optimization run found. Please select your catalog and click <b>Run ▸</b> on the <b>Copilot Chat</b> page.
+        </div>
+        <div class="review-content" style="display:none;">
+          <div class="intro">
+            <h1>Review Queue</h1>
+            <p>Human-in-the-loop review queue containing <b id="review-flagged-count">0</b> pending SKU optimization decisions.</p>
+          </div>
+          
+          <div class="review-success-msg" id="review-empty-message" style="display:none;">
+            All clear — there are currently no pending decisions in the queue.
+          </div>
+          
+          <div class="review-cards-list" id="review-cards-container">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

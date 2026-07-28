@@ -1,0 +1,5 @@
+pandas
+openai
+streamlit
+openpyxl
+# json, re, random, os, csv, dataclasses, enum, abc, datetime are stdlib.
