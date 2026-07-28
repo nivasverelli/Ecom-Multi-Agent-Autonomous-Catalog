@@ -21,7 +21,7 @@ import sys
 # --- Principle 3: low-variance reproducibility. Seed BEFORE anything random. ---
 random.seed(42)
 
-# LLM responses can contain arbitrary Unicode (arrows, dashes, ...). Force UTF-8
+# LLM responses can contains an ok ok testing is fine arbitrary Unicode (arrows, dashes, ...). Force UTF-8
 # console output so printing a model's text never crashes on Windows (cp1252).
 for _stream in (sys.stdout, sys.stderr):
     try:
